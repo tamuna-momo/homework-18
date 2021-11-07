@@ -1,0 +1,14 @@
+body{
+    background: black;
+}
+
+.clock{
+   position: absolute;
+   top: 50%;
+   left: 30%;
+   text-align: center;
+   color: #17D4FE;
+   font-weight: 400;
+   font-size: 70px;
+   font-family: 'Orbitron', sans-serif;
+}
