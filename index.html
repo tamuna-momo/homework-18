@@ -9,8 +9,7 @@
     </head>
     <body>
         <div id="ClockDisplay" class="clock" onload="showTime()"></div>
-        <div id="count-down">100</div>
-        <div class="slider">
+        <div class="slide-box">
             <div id="slider" class="slide-area">
                 <div class="slide-item" style="background-image: url(&quot;https://picsum.photos/1600/600&quot;); transform: translateX(0%);"><span class="title">Slide One Explanation</span></div>
                 <div class="slide-item" style="background-image: url(&quot;https://picsum.photos/id/237/1600/600&quot;); transform: translateX(100%);"><span class="title">Slide Two Explanation</span></div>
@@ -23,12 +22,17 @@
             <span class="icon-arrow_forward" id="next">
                 <svg height="50px" viewBox="0 0 512 512" width="50px" color="#fff" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="352,115.4 331.3,96 160,256 331.3,416 352,396.7 201.5,256 "></polygon></svg>
             </span>
+            <div class="slide-dots">
+                <span class="dots" onclick="currentSlide(1)"></span>
+                <span class="dots" onclick="currentSlide(2)"></span>
+                <span class="dots" onclick="currentSlide(3)"></span>
+                <span class="dots" onclick="currentSlide(4)"></span>
+            </div> 
         </div>
-           
         <button type="button" id="stop-sliding">Stop Sliding</button>
         <button type="button" id="start-sliding">Start Sliding</button>
         
 
-    <script src="app.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
