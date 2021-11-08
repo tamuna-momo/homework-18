@@ -86,22 +86,17 @@ body{
 }
 
 /* 3. */
-.dots{
-    text-align: center;
-}
+
 .dots {
     cursor: pointer;
     height: 16px;
     width: 16px;
     margin: 0 3px;
-    background-color: #acc;
+    background-color: rgb(78, 15, 15);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.5s ease;
-    
-  
   }
-  
   .enable, .dots:hover {
     background-color: #717161;
   }
