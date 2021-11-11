@@ -29,6 +29,30 @@
 
 // showTime();
 
+const slideArea = document.querySelector('.slide-area');
+// const dots = document.querySelectorAll('.dots span');
+// dots.forEach((dot) => {
+//   dot.addEventListener('click', e => {
+//     const index = e.target.getAttribute('data-index');
+//     activeIndex = Number(index);
+//     dots.forEach((dot) => {
+//       dot.classList.remove('active');
+//     });
+//     e.target.classList.add('active');
+//     renderSlider();
+//   })
+// });
+//
+// slideArea.addEventListener('mouseenter', e => {
+//   // console.log('mouseenter')
+//   stopAutoSliding()
+// });
+//
+// slideArea.addEventListener('mouseleave', e => {
+//   // console.log('mouseleave')
+//   startAutoSliding();
+// });
+
 // 2.
 const slides = document.querySelectorAll('.slide-item');
 const slidesLength = slides.length;
@@ -118,26 +142,26 @@ function mouseLeave() {
 }
 
 // 3.
-var slidePosition = 1;
-SlideShow(slidePosition);
+const slideArea = document.querySelector('.slide-area');
+const dots = document.querySelectorAll('.dots span');
+dots.forEach((dot) => {
+  dot.addEventListener('click', e => {
+    const index = e.target.getAttribute('data-index');
+    activeIndex = Number(index);
+    dots.forEach((dot) => {
+      dot.classList.remove('active');
+    });
+    e.target.classList.add('active');
+    renderSlider();
+  })
+});
 
+slideArea.addEventListener('mouseenter', e => {
+  // console.log('mouseenter')
+  stopAutoSliding()
+});
 
-function currentSlide(n) {
-  SlideShow(slidePosition = n);
-}
-
-function SlideShow(n) {
-  var i;
-  var slides = document.getElementsByClassName("slide-box");
-  var circles = document.getElementsByClassName("dots");
-  if (n > slides.length) {slidePosition = 1}
-  if (n < 1) {slidePosition = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < circles.length; i++) {
-      circles[i].className = circles[i].className.replace(" enable", "");
-  }
-  slides[slidePosition-1].style.display = "block";
-  circles[slidePosition-1].className += " enable";
-} 
+slideArea.addEventListener('mouseleave', e => {
+  // console.log('mouseleave')
+  startAutoSliding();
+});
